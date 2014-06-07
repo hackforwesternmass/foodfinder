@@ -1,0 +1,18 @@
+@import 'variables';
+
+.btn {
+	border-radius: 8px;
+	padding: 8px 16px;
+	margin: 4px;
+	border: 1px solid $brand-primary;
+	color: $brand-primary;
+	background: none;
+	&:hover,
+	&:focus {
+		background-color: $brand-primary;
+		color: white;
+	}
+}
+
+
+
