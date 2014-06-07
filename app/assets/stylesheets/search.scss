@@ -1,15 +1,73 @@
-.search-pane {
-  width: 30%;
-  float: left;
+// Colors
+$brand-primary: #5e2658;
 
-  background-color: #e8e8e8;
+html, body {
+	font-size: 16px;
 }
 
-.results-pane {
-  width: 70%;
-  position: absolute;
-  top: 0;
-  left: 30%;
+h1 {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	background-color: $brand-primary;
+	margin-top: 0;
+	padding-top: 16px;
+}
 
-  background-color: #fefefe;
+header {
+	background-color: $brand-primary;
+	.search-location {
+		padding: 16px;
+		input {
+			width: 70%;
+			border: none;
+			border-radius: 8px;
+			padding: 8px;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			right: 0;
+			width: 30%;
+		}
+	}
+	
+	
+	.options {
+		ul {
+			padding-left: 0;
+			li {
+				list-style: none;
+			}
+		}
+		background-color: #e8e8e8;
+		padding: 2px 16px;
+		//display: none;
+	}
+}
+
+main {
+	padding: 16px;
+}
+
+@media(min-width: 768px) {
+	.search-pane {
+		width: 30%;
+		float: left;
+
+		padding: 16px;
+
+		background-color: #e8e8e8;
+	}
+
+	.results-pane {
+		width: 70%;
+		position: absolute;
+		top: 0;
+		left: 30%;
+
+		padding: 16px;
+
+		background-color: #fefefe;
+	}
 }
