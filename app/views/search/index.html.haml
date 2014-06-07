@@ -1,8 +1,92 @@
-.search-pane
+%header
+
   %h1 Food Finder
 
-  %form.search
-    %input.address{ placeholder: 'Enter your city, state or zipcodes' }
+  .search-pane
+    %form
+      .search-location
+        %input{ placeholder: 'Address / City / Zip' }
+        %a{:href => "#"} Options
 
-.results-pane
-  %h2 Results
+      .options
+        %p I am looking for:
+        .search-type
+          %ul
+            %li
+              %input{ :id => "groceries", :type => "checkbox" }
+              %label{ :for => "groceries" } Groceries
+            %li
+              %input{ :id => "hot-meals", :type => "checkbox" }
+              %label{ :for => "hot-meals" } Hot Meals
+            %li
+              %input{ :id => "fresh-produce", :type => "checkbox" }
+              %label{ :for => "fresh-produce" } Fresh Produce
+
+%main
+  .results-pane
+    %h2 Results
+
+    .result
+      %h3 First Bapist Church of Springfield
+      %p{:class => "address"} 123 Laurel St, Springfield, MA
+      %p{:class => "distance"} 3 miles away.
+      %p{:class => "hours"} Open Today 11-4
+
+      %h4 This site provides the following services:
+      %ul{:class => "services"}
+        %li Groceries
+        %li Hot Meals
+
+      %p
+        Additional information about this site. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
+        ut, adipiscing nec lorem.
+
+      %button{:class => "get-directions"} Get Directions
+      %button{:class => "visit-website"} Visit Website
+      %button{:class => "call-number"} Call Number
+      %button{:class => "send-to-phone"} Send Info to Phone #
+      %button{:class => "view-map"} View on Map
+    .result
+      %h3 First Bapist Church of Springfield
+      %p{:class => "address"} 123 Laurel St, Springfield, MA
+      %p{:class => "distance"} 3 miles away.
+      %p{:class => "hours"} Open Today 11-4
+
+      %h4 This site provides the following services:
+      %ul{:class => "services"}
+        %li Groceries
+        %li Hot Meals
+
+      %p
+        Additional information about this site. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
+        ut, adipiscing nec lorem.
+
+      %button{:class => "get-directions"} Get Directions
+      %button{:class => "visit-website"} Visit Website
+      %button{:class => "call-number"} Call Number
+      %button{:class => "send-to-phone"} Send Info to Phone #
+      %button{:class => "view-map"} View on Map
+
+    .result
+      %h3 First Bapist Church of Springfield
+      %p{:class => "address"} 123 Laurel St, Springfield, MA
+      %p{:class => "distance"} 3 miles away.
+      %p{:class => "hours"} Open Today 11-4
+
+      %h4 This site provides the following services:
+      %ul{:class => "services"}
+        %li Groceries
+        %li Hot Meals
+
+      %p
+        Additional information about this site. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
+        ut, adipiscing nec lorem.
+
+      %button{:class => "get-directions"} Get Directions
+      %button{:class => "visit-website"} Visit Website
+      %button{:class => "call-number"} Call Number
+      %button{:class => "send-to-phone"} Send Info to Phone #
+      %button{:class => "view-map"} View on Map
