@@ -2,7 +2,9 @@
 $brand-primary: #5e2658;
 
 html, body {
+  height: 100%;
   font-size: 16px;
+  overflow: hidden;
 }
 
 h1 {
@@ -12,6 +14,17 @@ h1 {
 	background-color: $brand-primary;
 	margin-top: 0;
 	padding-top: 16px;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
 }
 
 header {
@@ -50,24 +63,52 @@ main {
 	padding: 16px;
 }
 
+.search-pane {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.results-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.results-pane {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fefefe;
+  margin-top: 400px;
+}
+
 @media(min-width: 768px) {
+  #map {
+    height: 100%;
+    width: 70%;
+    right: 30%;
+  }
+
 	.search-pane {
+    top: 10px;
+    left: 10px;
+
 		width: 30%;
-		float: left;
 
 		padding: 16px;
 
-		background-color: #e8e8e8;
 	}
 
 	.results-pane {
-		width: 70%;
-		position: absolute;
-		top: 0;
-		left: 30%;
-
+		width: 30%;
+    margin-top: 0;
 		padding: 16px;
-
-		background-color: #fefefe;
 	}
 }
