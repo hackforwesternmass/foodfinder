@@ -1,0 +1,15 @@
+.search-pane {
+  width: 30%;
+  float: left;
+
+  background-color: #e8e8e8;
+}
+
+.results-pane {
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 30%;
+
+  background-color: #fefefe;
+}
