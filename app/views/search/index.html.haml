@@ -2,7 +2,16 @@
   %h1 Food Finder
 
   %form
-    %input{ placeholder: 'Enter your city, state or zipcodes' }
+    %h4 I am located at:
+    .search-location
+      %input{ placeholder: 'Enter your city, state or zipcodes' }
+      %button Current Location
+  
+    %h4 I am looking for:
+    .search-type
+      %input{ :type => "checkbox" } Groceries
+      %input{ :type => "checkbox" } Hot Meals
+      %input{ :type => "checkbox" } Fresh Produce
 
 .results-pane
   %h2 Results
@@ -18,7 +27,10 @@
       %li Groceries
       %li Hot Meals
 
-    %p Additional information about this site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor ut, adipiscing nec lorem.
+    %p
+      Additional information about this site. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
+      ut, adipiscing nec lorem.
 
     %button{:class => "get-directions"} Get Directions
     %button{:class => "visit-website"} Visit Website
@@ -36,7 +48,10 @@
       %li Groceries
       %li Hot Meals
 
-    %p Additional information about this site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor ut, adipiscing nec lorem.
+    %p
+      Additional information about this site. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
+      ut, adipiscing nec lorem.
 
     %button{:class => "get-directions"} Get Directions
     %button{:class => "visit-website"} Visit Website
@@ -55,7 +70,10 @@
       %li Groceries
       %li Hot Meals
 
-    %p Additional information about this site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor ut, adipiscing nec lorem.
+    %p
+      Additional information about this site. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
+      ut, adipiscing nec lorem.
 
     %button{:class => "get-directions"} Get Directions
     %button{:class => "visit-website"} Visit Website
