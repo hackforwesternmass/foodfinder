@@ -1,4 +1,7 @@
 .search-pane {
+  padding: 10px;
+  box-sizing: border-box;
+
   width: 30%;
   float: left;
 
@@ -6,6 +9,9 @@
 }
 
 .results-pane {
+  padding: 10px;
+  box-sizing: border-box;
+
   width: 70%;
   position: absolute;
   top: 0;
