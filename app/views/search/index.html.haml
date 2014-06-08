@@ -21,13 +21,14 @@
         %ul
           %li
             %input{ :id => "groceries", :type => "checkbox" }
-            %label{ :for => "groceries" } Groceries
+            %label{ :for => "groceries" } <%= t('search_option_groceries') %>
+
           %li
             %input{ :id => "hot-meals", :type => "checkbox" }
-            %label{ :for => "hot-meals" } Hot Meals
+            %label{ :for => "hot-meals" } <%= t('search_option_groceries') %>
           %li
             %input{ :id => "fresh-produce", :type => "checkbox" }
-            %label{ :for => "fresh-produce" } Fresh Produce
+            %label{ :for => "fresh-produce" } <%= t('search_option_fresh_produce') %>
 
 .results-container.slide.in
   %main.results-pane
