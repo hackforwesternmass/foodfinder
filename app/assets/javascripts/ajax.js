@@ -50,25 +50,27 @@ $(function() {
     if(!$(e.target).hasClass("get-directions")) {
       return;
     } 
+    console.log("hey");
     var lat, long, start, end;
     lat = $(e.target).attr('data-lat');
     long = $(e.target).attr('data-long');
-    start = $("#search").val();
+    start = $("#start").val();
     end = lat + " " + long;
+    console.log(lat, long, start, end);
     calcRoute(start, end);
     e.preventDefault();
     return false;
   });
   
-  $("body").on("click", function(e) {
-    if(!$(e.target).hasClass("show-agency")) {
-      return;
-    }
-    var lat, long;
-    lat = $(e.target).attr('data-lat');
-    long = $(e.target).attr('data-long');
-    zoomTo(lat, long);
-    e.preventDefault();
-    return false;
-  });
+  //$("body").on("click", function(e) {
+    //if(!$(e.target).hasClass("show-agency")) {
+      //return;
+    //}
+    //var lat, long;
+    //lat = $(e.target).attr('data-lat');
+    //long = $(e.target).attr('data-long');
+    //zoomTo(lat, long);
+    //e.preventDefault();
+    //return false;
+  //});
 });

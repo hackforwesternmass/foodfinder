@@ -40,19 +40,19 @@ function calcRoute(start, end) {
     directionsDisplay.setDirections(response);
   });
 }
-function zoomTo(lat, long)
-{
-  var myLatlng = new google.maps.LatLng(lat, long);
-  var request = {
-    origin:location
-  };
-  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+//function zoomTo(lat, long)
+//{
+  //var myLatlng = new google.maps.LatLng(lat, long);
+  //var request = {
+    //origin:location
+  //};
+  //var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   // To add the marker to the map, use the 'map' property
-  var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-  });
-}
+  //var marker = new google.maps.Marker({
+    //position: myLatlng,
+    //map: map,
+  //});
+//}
 function selectAgency(agency)
 {
   if (agency.value == 'undefined')
