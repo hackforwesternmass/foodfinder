@@ -1,0 +1,46 @@
+
+- if flash[:message]
+  .alert= flash[:message]
+
+%h1 Upload Agency Data
+
+= form_for :upload, url: upload_admin_agencies_url do |f|
+  .field
+    = f.label :file, 'CSV:'
+    = f.file_field :file
+  .field
+    = f.submit 'Upload CSV'
+
+
+- if @failed_agencies.count > 0
+  %h1 Failed Geocoding
+
+  %a.btn{ href: geocode_all_admin_agencies_url, data: { method: 'post' } } Retry All Failed Geocodes
+
+  %table
+    %tr
+      %th Agency
+      %th Retry
+    - for agency in @failed_agencies
+      %tr
+        %td= agency.agency
+        %td
+          %a{ href: geocode_admin_agency_url(agency.id), data: { method: 'post' } } Retry Geocode
+
+%h1 Agencies
+
+%table
+  %tr
+    %th Agency
+    %th Coordinates
+    %th
+  - for agency in @agencies
+    %tr
+      %td= agency.agency
+      %td
+        - if agency.longitude.blank?
+          %a{ href: geocode_admin_agency_url(agency.id), data: { method: 'post' } } Retry Geocode
+        - else
+          = agency.longitude
+          %br
+          = agency.latitude

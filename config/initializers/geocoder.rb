@@ -1,0 +1,5 @@
+Geocoder.configure(
+
+  lookup: :google
+
+)

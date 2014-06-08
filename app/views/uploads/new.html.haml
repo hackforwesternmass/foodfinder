@@ -1,9 +1,0 @@
-- if flash[:message]
-  .alert= flash[:message]
-
-= form_for :upload, url: '/uploads' do |f|
-  .field
-    = f.label :file, 'CSV:'
-    = f.file_field :file
-  .field
-    = f.submit 'Upload CSV'
