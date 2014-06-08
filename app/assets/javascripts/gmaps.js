@@ -40,6 +40,17 @@ function calcRoute(start, end) {
     directionsDisplay.setDirections(response);
   });
 }
+function zoomTo(location)
+{
+  var request = {
+    origin:location
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK)
+    directionsDisplay.setDirections(response);
+  });
+
+}
 function selectAgency(agency)
 {
   if (agency.value == 'undefined')

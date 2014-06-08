@@ -10,10 +10,12 @@ $(function() {
     for(var i = 0; i < agencies.length; i++) {
       agency = agencies[i];
       output += Mustache.render("<div class='result'> \
-        <h3><a class='agency' data-lat='{{latitude}}' data-long='{{longitude}}' href='#'>{{agency}} - {{type}}</a></h3> \
+        <h3><a class='show-agency' data-lat='{{latitude}}' data-long='{{longitude}}' href='#'>{{agency}} - {{type}}</a></h3> \
         <p class='address'>{{address}}, {{city}}, {{state}} {{zip}}</p> \
+        <p class='phone'>{{phone}} \
         <p class='distance'>{{distance}} miles away.</p> \
         <p class='hours'>{{hours}}</p> \
+        <button class='btn get-directions' data-lat='{{latitude}}' data-long='{{longitude}}'>Get Directions</button> \
         </div><hr />", agency);
     }
     
@@ -44,16 +46,23 @@ $(function() {
   });
 
   $("body").on("click", function(e) {
-    if(!$(e.target).hasClass("agency")) {
-        return;
+    if($(e.target).hasClass("get-directions")) {
+      var lat, long, start, end;
+      lat = $(e.target).attr('data-lat');
+      long = $(e.target).attr('data-long');
+      start = $("#search").val();
+      end = lat + " " + long;
+      calcRoute(start, end);
+      e.preventDefault();
+      return false;
+    } else if($(e.target).hasClass("show-agency")) {
+      var lat, long, dest;
+      lat = $(e.target).attr('data-lat');
+      long = $(e.target).attr('data-long');
+      dest = lat + " " + long;
+      zoomTo(dest);
+      e.preventDefault();
+      return false;
     }
-    var lat, long, start, end;
-    lat = $(e.target).attr('data-lat');
-    long = $(e.target).attr('data-long');
-    start = $("#search").val();
-    end = lat + " " + long;
-    calcRoute(start, end);
-    e.preventDefault();
-    return false;
   });
 });
