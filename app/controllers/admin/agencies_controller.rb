@@ -1,7 +1,7 @@
 class Admin::AgenciesController < ApplicationController
 
   def index
-    @failed_agencies = Agency.where('longitude is NULL OR longitude = ?', "")
+    @failed_agencies = Agency.where('longitude is NULL')
     @agencies = Agency.all
   end
 
