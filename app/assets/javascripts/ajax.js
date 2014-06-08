@@ -9,6 +9,7 @@ $(function() {
     var agency;
     for(var i = 0; i < agencies.length; i++) {
       agency = agencies[i];
+      agency.distance = agency.distance.toFixed(1)
       output += Mustache.render("<div class='result'> \
         <h3><a class='show-agency' data-lat='{{latitude}}' data-long='{{longitude}}' href='#'>{{agency}} - {{type}}</a></h3> \
         <p class='address'>{{address}}, {{city}}, {{state}} {{zip}}</p> \
@@ -18,7 +19,7 @@ $(function() {
         <button class='btn get-directions' data-lat='{{latitude}}' data-long='{{longitude}}'>Get Directions</button> \
         </div><hr />", agency);
     }
-    
+
     return output;
   };
 
@@ -27,7 +28,9 @@ $(function() {
    */
   var req = function(params) {
     $.ajax({
-      url: "/ajax/?query=" + params,
+      url: "/ajax",
+      type: 'POST',
+      data: params
     })
       .done(function( resp ) {
         $("#results").html( render(resp) );
@@ -39,7 +42,7 @@ $(function() {
    */
   $("#search").keypress(function(e) {
     if(e.keyCode == 13) {
-      var params = $("#search").val();
+      var params = $("form.search").serialize();
       req(params);
       return false;
     }

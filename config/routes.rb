@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   resources :agencies, only: [:index, :show]
 
-  get '/ajax' => 'ajax#index'
+  post '/ajax' => 'ajax#index'
 
   # You can have the root of your site routed with "root"
   root 'search#index'
