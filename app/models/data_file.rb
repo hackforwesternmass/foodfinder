@@ -3,29 +3,25 @@ require 'csv'
 class DataFile
 
   def self.parse(file)
-    Agency.delete_all
-
     json = JSON.parse CSV.parse(file.read).to_json
-
     attributes = json[0]
-    agencies = []
 
     for obj in json
-      # Skip headers if present
+      # Skip headers
       next if obj[0] == "AgencyRef"
 
-      agency = {}
+      agency_data = {}
 
       attributes.each_with_index do |a, i|
-        agency[a.underscore] = obj[i]
+        agency_data[a.underscore] = obj[i]
       end
 
-      Agency.create!(agency)
-
-      agencies << agency
+      if existing_agency = Agency.where(agency_ref: obj[0]).first
+        existing_agency.update_attributes(agency_data)
+      else
+        Agency.create!(agency_data)
+      end
     end
-
-    agencies
   end
 
 end
