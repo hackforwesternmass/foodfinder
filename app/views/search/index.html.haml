@@ -1,15 +1,11 @@
 :javascript
-  function initialize() {
-    var mapOptions = {
-      center: new google.maps.LatLng(42.277309, -72.634735),
-      zoom: 10
-   };
-    var map = new google.maps.Map(document.getElementById("map"),
-        mapOptions);
-  }
+  var geocoder;
+  var map;
+  var directionsDisplay;
+  var directionsService = new google.maps.DirectionsService();
   google.maps.event.addDomListener(window, 'load', initialize);
 
-#map
+#map-canvas
 
 %header.search-pane
   %h1 <%= t('title') %>
@@ -37,22 +33,4 @@
   %main.results-pane
     %h2 <%= t('results_header') =>
     %hr
-    
-    .result
-      %h3 First Bapist Church of Springfield
-      %p{:class => "address"} 123 Laurel St, Springfield, MA
-      %p{:class => "distance"} 3 miles away.
-      %p{:class => "hours"} Open Today 11-4.
-
-      %h4 This site provides the following services:
-      %ul{:class => "services"}
-        %li Groceries
-        %li Hot Meals
-
-      %p
-        In accordance with Federal law and U.S. Department of Agriculture policy, this institution is prohibited from discriminating on the basis of race, color, national origin, sex, age, or disability.  (Not all prohibited bases apply to all programs.)  To file a complaint of discrimination, write to USDA, Director, Office of Civil Rights, 1400 Independence Avenue, S.W., Washington, D.C. 20250-9410, or call (800)795-3272 (voice) or (202)720-6382 (TDD). USDA is an equal opportunity provider employer, and lender.
-
-      %button{:class => "btn get-directions"} Get Directions
-      %button{:class => "btn call-number"} Call: (413) 123-4321
-      %hr
-
+    #results
