@@ -2,7 +2,7 @@
 
 .btn {
   border-radius: $border-radius;
-  padding: 8px 16px;
+  padding: 7px 16px;
   margin: 4px 0px 4px;
   border: 1px solid $brand-primary;
   color: $brand-primary;
@@ -11,6 +11,16 @@
   &:focus {
     background-color: $brand-primary;
     color: white;
+  }
+}
+
+.btn-options {
+  border: 1px solid white;
+  color: white; 
+  &:hover,
+  &:focus {
+    background-color: white;
+    color: $brand-primary;
   }
 }
 

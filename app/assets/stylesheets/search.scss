@@ -40,6 +40,7 @@ ul {
 }
 
 header {
+  box-shadow: 1px 1px 10px rgba(0,0,0, .5);
   background-color: $brand-primary;
   .search-location {
     padding: 16px;
@@ -48,7 +49,6 @@ header {
       border: none;
       border-radius: $border-radius;
       padding: 8px;
-      //margin-right: 16px;
     }
     a {
       color: white;
@@ -90,6 +90,7 @@ main {
 }
 
 .results-pane {
+  box-shadow: 1px 1px 10px rgba(0,0,0, .5);
   box-sizing: border-box;
   position: absolute;
   top: 400px;
@@ -128,9 +129,14 @@ main {
   }
 
   .results-pane {
+    //height: 100%;
     width: 30%;
     top: 0;
     padding: 16px;
+  }
+
+  .results-container {
+    //height: 100%;
   }
 
   header {

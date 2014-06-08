@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
 // Colors
 $brand-primary: #5e2658;
 $brand-offwhite: #fcfbfb;
@@ -5,7 +7,7 @@ $brand-blue: #3038a6;
 $brand-green: #3e7300;
 
 // Fonts
-$font-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+$font-sans-serif: Lato, "Helvetica Neue", Helvetica, sans-serif;
 
 // Border radius
 $border-radius: 4px;

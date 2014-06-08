@@ -17,7 +17,7 @@
   %form
     .search-location
       %input{ placeholder: 'Address / City / Zip' }
-      %a{:href => "#"} Options
+      %button{:class => "btn btn-options"} Options
 
     .options
       %p I am looking for:
@@ -38,24 +38,23 @@
     %h2 Results
     %hr
     
-    %ol
-      %li.result
-        %h3 First Bapist Church of Springfield
-        %p{:class => "address"} 123 Laurel St, Springfield, MA
-        %p{:class => "distance"} 3 miles away.
-        %p{:class => "hours"} Open Today 11-4
+    .result
+      %h3 First Bapist Church of Springfield
+      %p{:class => "address"} 123 Laurel St, Springfield, MA
+      %p{:class => "distance"} 3 miles away.
+      %p{:class => "hours"} Open Today 11-4.
 
-        %h4 This site provides the following services:
-        %ul{:class => "services"}
-          %li Groceries
-          %li Hot Meals
+      %h4 This site provides the following services:
+      %ul{:class => "services"}
+        %li Groceries
+        %li Hot Meals
 
-        %p
-          Additional information about this site. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
-          ut, adipiscing nec lorem.
+      %p
+        Additional information about this site. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nullam arcu quam, fermentum aliquet tempor
+        ut, adipiscing nec lorem.
 
-        %button{:class => "btn get-directions"} Get Directions
-        %button{:class => "btn call-number"} Call: (413) 123-4321
+      %button{:class => "btn get-directions"} Get Directions
+      %button{:class => "btn call-number"} Call: (413) 123-4321
       %hr
 
