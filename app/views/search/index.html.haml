@@ -29,8 +29,8 @@
             %input{ :id => "brown_bag", :type => "checkbox", :name => 'brown_bag', value: '1' }
             %label{ :for => "brown_bag" }= t('search_option_brown_bag')
 
-.results-container.slide.in
-  %main.results-pane
+.results-container
+  %main.results-pane.slide
     %h2= t('results_header')
     %hr
     #results

@@ -27,6 +27,8 @@ $(function() {
    * ajax request
    */
   var req = function(params) {
+    $('.results-pane').removeClass('in');
+
     $.ajax({
       url: "/ajax",
       type: 'POST',
@@ -34,6 +36,10 @@ $(function() {
     })
       .done(function( resp ) {
         $("#results").html( render(resp) );
+
+        setTimeout(function() {
+          $('.results-pane').addClass('in');
+        }, 200)
 
         if (typeof window.markers != "undefined") {
           for (var i = 0; i < window.markers.length; i++) {

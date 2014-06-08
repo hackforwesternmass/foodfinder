@@ -49,7 +49,7 @@ header {
   .search-location {
     padding: 16px;
     input {
-      width: 70%;
+      width: 68%;
       border: none;
       border-radius: $border-radius;
       padding: 8px;
@@ -98,14 +98,18 @@ main {
   position: absolute;
   top: 400px;
   right: 0;
+  left: 0;
+  min-height: 600px;
   background-color: #fefefe;
 }
 
-.slide {
-  -webkit-transform: translate3d(0, 100%, 0);
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  &.in {
-    -webkit-transform: translate3d(0, 0, 0);
+@media(max-width: 768px) {
+  .slide {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    &.in {
+      -webkit-transform: translate3d(0, 0, 0);
+    }
   }
 }
 
@@ -118,6 +122,7 @@ main {
 }
 
 @media(min-width: 768px) {
+
   #map-canvas {
     height: 100%;
     width: 70%;
@@ -134,6 +139,7 @@ main {
   .results-pane {
     width: 30%;
     top: 0;
+    left: auto;
     padding: 16px;
   }
 
