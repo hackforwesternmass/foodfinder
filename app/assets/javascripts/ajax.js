@@ -49,7 +49,7 @@ $(function() {
   $("body").on("click", function(e) {
     if(!$(e.target).hasClass("get-directions")) {
       return;
-    } 
+    }
     var lat, long, start, end;
     lat = $(e.target).attr('data-lat');
     long = $(e.target).attr('data-long');
@@ -59,7 +59,7 @@ $(function() {
     e.preventDefault();
     return false;
   });
-  
+
   $("body").on("click", function(e) {
     if(!$(e.target).hasClass("show-agency")) {
       return;
