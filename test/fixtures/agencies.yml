@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agency_ref: MyString
+  agency: MyString
+  program: MyString
+  agency_type_id: MyString
+  type: 
+  hours: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  contact: MyString
+  e_mail: MyString
+  country: MyString
+  open_sun_am: false
+  open_sun_pm: false
+
+two:
+  agency_ref: MyString
+  agency: MyString
+  program: MyString
+  agency_type_id: MyString
+  type: 
+  hours: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  contact: MyString
+  e_mail: MyString
+  country: MyString
+  open_sun_am: false
+  open_sun_pm: false
