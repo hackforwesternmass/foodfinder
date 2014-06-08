@@ -21,7 +21,15 @@
 
 en:
   title: "Food Finder"
+  results_header: "Results"
+  # search for settings
+  looking_for: "I am looking for:"
+  options_button: "Options"
+  search_option_groceries: "Groceries"
+  search_option_hot_meals: "Hot Meals"
+  search_option_brown_bag: "Brown Bag (55+ only)"
+  #explantions
   disclaimer: "In accordance with Federal law and U.S. Department of Agriculture policy, this institution is prohibited from discriminating on the basis of race, color, national origin, sex, age, or disability.  (Not all prohibited bases apply to all programs.)  To file a complaint of discrimination, write to USDA, Director, Office of Civil Rights, 1400 Independence Avenue, S.W., Washington, D.C. 20250-9410, or call (800)795-3272 (voice) or (202)720-6382 (TDD). USDA is an equal opportunity provider employer, and lender."
-  search_explaination_html: "<p>The Emergency Food Network is a group of food providers in Western Massachusetts who provide free food throughout the region.</p>
+  search_explanation_html: "<p>The Emergency Food Network is a group of food providers in Western Massachusetts who provide free food throughout the region.</p>
 <p>FOOD IS DISTRIBUTED FREE OF CHARGE AT ALL PROGRAMS LISTED ON THIS SITE.</p>
 <p>Most pantries require verification of identity, address, income and/or family size.  <strong>Call program for specific requirements.</strong>  Photo ID and/or Social Security numbers are never required to receive USDA foods."

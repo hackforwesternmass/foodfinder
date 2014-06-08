@@ -8,7 +8,7 @@
 #map-canvas
 
 %header.search-pane
-  %h1 Food Finder
+  %h1= t('title')
 
   %form.search
     .search-location
@@ -16,21 +16,21 @@
       %button{:class => "btn btn-options"} Options
 
     .options
-      %p I am looking for:
+      %p= t('looking_for')
       .search-type
         %ul
           %li
             %input{ :id => "groceries", :type => "checkbox", :name => 'groceries', value: '1' }
-            %label{ :for => "groceries" } Groceries
+            %label{ :for => "groceries" }= t('search_option_groceries')
           %li
             %input{ :id => "hot_meals", :type => "checkbox", :name => 'hot_meals', value: '1' }
-            %label{ :for => "hot_meals" } Hot Meals
+            %label{ :for => "hot_meals" }= t('search_option_hot_meals')
           %li
             %input{ :id => "brown_bag", :type => "checkbox", :name => 'brown_bag', value: '1' }
-            %label{ :for => "brown_bag" } Brown Bag (55+ only)
+            %label{ :for => "brown_bag" }= t('search_option_brown_bag')
 
 .results-container.slide.in
   %main.results-pane
-    %h2 Results
+    %h2= t('results_header')
     %hr
     #results
