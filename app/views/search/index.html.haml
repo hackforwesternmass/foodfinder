@@ -10,10 +10,10 @@
 %header.search-pane
   %h1= t('title')
 
-  %form.search
+  %form.search#search
     .search-location
-      %input#search{ name: 'query', placeholder: 'Address / City / Zip' }
-      %button{:class => "btn btn-options"} Options
+      %input{ name: 'query', placeholder: 'Address / City / Zip' }
+      %button{:class => "btn btn-options"} Search
 
     .options
       %p= t('looking_for')
