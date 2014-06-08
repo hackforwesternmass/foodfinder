@@ -9,6 +9,7 @@ $(function() {
     var agency;
     for(var i = 0; i < agencies.length; i++) {
       agency = agencies[i];
+      agency.distance = agency.distance.toFixed(1)
       output += Mustache.render("<div class='result'> \
         <h3><a class='agency' data-lat='{{latitude}}' data-long='{{longitude}}' href='#'>{{agency}} - {{type}}</a></h3> \
         <p class='address'>{{address}}, {{city}}, {{state}} {{zip}}</p> \
