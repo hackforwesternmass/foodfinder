@@ -8,7 +8,7 @@
 #map-canvas
 
 %header.search-pane
-  %h1 <%= t('title') %>
+  %h1= t('title')
 
   %form
     .search-location
@@ -16,7 +16,7 @@
       %button{:class => "btn btn-options"} Options
 
     .options
-      %p <%= t('looking_for') %>
+      %p= t('looking_for')
       .search-type
         %ul
           %li
@@ -31,6 +31,6 @@
 
 .results-container.slide.in
   %main.results-pane
-    %h2 <%= t('results_header') =>
+    %h2= t('results_header')
     %hr
     #results
