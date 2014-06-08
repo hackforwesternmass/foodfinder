@@ -10,9 +10,9 @@
 %header.search-pane
   %h1 Food Finder
 
-  %form
+  %form.search
     .search-location
-      %input#search{ placeholder: 'Address / City / Zip' }
+      %input#search{ name: 'query', placeholder: 'Address / City / Zip' }
       %button{:class => "btn btn-options"} Options
 
     .options
@@ -20,14 +20,14 @@
       .search-type
         %ul
           %li
-            %input{ :id => "groceries", :type => "checkbox" }
+            %input{ :id => "groceries", :type => "checkbox", :name => 'groceries', value: '1' }
             %label{ :for => "groceries" } Groceries
           %li
-            %input{ :id => "hot-meals", :type => "checkbox" }
-            %label{ :for => "hot-meals" } Hot Meals
+            %input{ :id => "hot_meals", :type => "checkbox", :name => 'hot_meals', value: '1' }
+            %label{ :for => "hot_meals" } Hot Meals
           %li
-            %input{ :id => "fresh-produce", :type => "checkbox" }
-            %label{ :for => "fresh-produce" } Fresh Produce
+            %input{ :id => "brown_bag", :type => "checkbox", :name => 'brown_bag', value: '1' }
+            %label{ :for => "brown_bag" } Brown Bag (55+ only)
 
 .results-container.slide.in
   %main.results-pane

@@ -18,7 +18,7 @@ $(function() {
         <button class='btn get-directions' data-lat='{{latitude}}' data-long='{{longitude}}'>Get Directions</button> \
         </div><hr />", agency);
     }
-    
+
     return output;
   };
 
@@ -27,7 +27,9 @@ $(function() {
    */
   var req = function(params) {
     $.ajax({
-      url: "/ajax/?query=" + params,
+      url: "/ajax",
+      type: 'POST',
+      data: params
     })
       .done(function( resp ) {
         $("#results").html( render(resp) );
@@ -39,7 +41,7 @@ $(function() {
    */
   $("#search").keypress(function(e) {
     if(e.keyCode == 13) {
-      var params = $("#search").val();
+      var params = $("form.search").serialize();
       req(params);
       return false;
     }
