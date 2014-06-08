@@ -47,23 +47,28 @@ $(function() {
   });
 
   $("body").on("click", function(e) {
-    if($(e.target).hasClass("get-directions")) {
-      var lat, long, start, end;
-      lat = $(e.target).attr('data-lat');
-      long = $(e.target).attr('data-long');
-      start = $("#search").val();
-      end = lat + " " + long;
-      calcRoute(start, end);
-      e.preventDefault();
-      return false;
-    } else if($(e.target).hasClass("show-agency")) {
-      var lat, long, dest;
-      lat = $(e.target).attr('data-lat');
-      long = $(e.target).attr('data-long');
-      dest = lat + " " + long;
-      zoomTo(dest);
-      e.preventDefault();
-      return false;
+    if(!$(e.target).hasClass("get-directions")) {
+      return;
+    } 
+    var lat, long, start, end;
+    lat = $(e.target).attr('data-lat');
+    long = $(e.target).attr('data-long');
+    start = $("#search").val();
+    end = lat + " " + long;
+    calcRoute(start, end);
+    e.preventDefault();
+    return false;
+  });
+  
+  $("body").on("click", function(e) {
+    if(!$(e.target).hasClass("show-agency")) {
+      return;
     }
+    var lat, long;
+    lat = $(e.target).attr('data-lat');
+    long = $(e.target).attr('data-long');
+    zoomTo(lat, long);
+    e.preventDefault();
+    return false;
   });
 });

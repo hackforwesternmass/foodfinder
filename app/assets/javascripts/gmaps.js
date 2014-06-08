@@ -40,16 +40,18 @@ function calcRoute(start, end) {
     directionsDisplay.setDirections(response);
   });
 }
-function zoomTo(location)
+function zoomTo(lat, long)
 {
+  var myLatlng = new google.maps.LatLng(lat, long);
   var request = {
     origin:location
   };
-  directionsService.route(request, function(response, status) {
-    if (status == google.maps.DirectionsStatus.OK)
-    directionsDisplay.setDirections(response);
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  // To add the marker to the map, use the 'map' property
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
   });
-
 }
 function selectAgency(agency)
 {
