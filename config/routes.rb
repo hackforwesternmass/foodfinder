@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get '/upload' => 'uploads#new'
   post '/uploads' => 'uploads#create'
 
-  resources :agencies, only: [:index]
+  resources :agencies, only: [:index, :show]
+
+  get '/ajax' => 'ajax#index'
 
   # You can have the root of your site routed with "root"
   root 'search#index'
