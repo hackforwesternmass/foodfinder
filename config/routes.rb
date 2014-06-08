@@ -2,10 +2,24 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  namespace 'admin' do
+    resources :agencies do
+      member do
+        post 'geocode'
+      end
+      collection do
+        post 'upload'
+        post 'geocode_all'
+      end
+    end
+  end
+
   get '/upload' => 'uploads#new'
   post '/uploads' => 'uploads#create'
 
-  resources :agencies, only: [:index]
+  resources :agencies, only: [:index, :show]
+
+  get '/ajax' => 'ajax#index'
 
   # You can have the root of your site routed with "root"
   root 'search#index'

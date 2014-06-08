@@ -3,7 +3,7 @@ class Agency < ActiveRecord::Base
 
   geocoded_by :full_street_address
 
-  after_validation :geocode
+  after_validation :geocode, on: :create
 
   def full_street_address
     [address, city, state].join(', ')
