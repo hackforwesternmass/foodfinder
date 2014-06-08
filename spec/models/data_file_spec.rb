@@ -4,13 +4,13 @@ describe 'DataFile' do
   let(:single_row_data) do
 <<-DATA
 AgencyRef, address, city, state
-002, "123 Main St.", 'Amherst', 'MA'
+002, "123 Main St.", "Amherst", "MA"
 DATA
 end
 
   context '.parse' do
     it 'ignores the header row' do
-      file = double('dummy header file', read: 'AgencyRef\n')
+      file = double('dummy header file', read: 'AgencyRef')
       DataFile.parse(file)
       expect(Agency.all.count).to eq 0
     end
