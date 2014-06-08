@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem "geocoder"
 
 # tests!
-gem "rspec"
+gem "rspec-rails"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

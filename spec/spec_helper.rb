@@ -3,6 +3,13 @@
 # Require this file using `require "spec_helper"` to ensure that it is only
 # loaded once.
 #
+
+
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'rspec/autorun'
+
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
