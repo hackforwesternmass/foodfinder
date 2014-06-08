@@ -22,6 +22,10 @@ class DataFile
         Agency.create!(agency_data)
       end
     end
+
+    # TODO(tmorris): delete obsolete records from database.
+    #   Make sure that you don't delete all the rows in the database
+    #   if it was a bad import.
   end
 
 end

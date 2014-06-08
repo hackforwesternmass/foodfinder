@@ -19,6 +19,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Geocoder for lon lat
 gem "geocoder"
 
+# tests!
+gem "rspec-rails"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -42,3 +45,8 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :test, :development do
+  gem 'pry-debugger'
+  gem 'awesome_print'
+end
