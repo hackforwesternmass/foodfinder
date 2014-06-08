@@ -25,6 +25,7 @@ en:
   # search for settings
   looking_for: "I am looking for:"
   options_button: "Options"
+  search_button: "Search"
   search_option_groceries: "Groceries"
   search_option_hot_meals: "Hot Meals"
   search_option_brown_bag: "Brown Bag (55+ only)"
