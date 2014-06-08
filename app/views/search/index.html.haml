@@ -12,7 +12,7 @@
 #map
 
 %header.search-pane
-  %h1 Food Finder
+  %h1 <%= t('title') %>
 
   %form
     .search-location
@@ -20,7 +20,7 @@
       %button{:class => "btn btn-options"} Options
 
     .options
-      %p I am looking for:
+      %p <%= t('looking_for') %>
       .search-type
         %ul
           %li
@@ -35,7 +35,7 @@
 
 .results-container.slide.in
   %main.results-pane
-    %h2 Results
+    %h2 <%= t('results_header') =>
     %hr
     
     .result
