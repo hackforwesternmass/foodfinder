@@ -34,6 +34,27 @@ $(function() {
     })
       .done(function( resp ) {
         $("#results").html( render(resp) );
+
+        if (typeof window.markers != "undefined") {
+          for (var i = 0; i < window.markers.length; i++) {
+            window.markers[i].setMap(null)
+          }
+        }
+
+        window.markers = []
+
+        var len = resp.length
+        for (var i = 0; i < len; i++) {
+          var myLatlng = new google.maps.LatLng(resp[i].latitude,resp[i].longitude);
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Ok'
+          });
+
+          window.markers.push(marker)
+        }
+
       });
   };
 

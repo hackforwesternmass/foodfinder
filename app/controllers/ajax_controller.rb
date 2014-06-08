@@ -1,6 +1,6 @@
 class AjaxController < ApplicationController
   def index
-    @agencies = Agency.near(params[:query])
+    @agencies = Agency.near(params[:query]).limit(20)
 
     if params[:groceries]
       @agencies = @agencies.where("agency_type_id = ? OR agency_type_id = ?", "H", "P")

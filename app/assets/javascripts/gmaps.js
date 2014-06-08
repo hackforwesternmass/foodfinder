@@ -14,7 +14,7 @@ function codeAddress(address) {
   address = address.value;
   if (address == 'undefined') return;
   geocoder.geocode(
-      { 'address': address }, 
+      { 'address': address },
       function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           map.setCenter(results[0].geometry.location);
@@ -63,4 +63,3 @@ function selectAgency(agency)
   document.getElementById('end').value = agency.value;
   codeAddress(document.getElementById('end'));
 }
-
