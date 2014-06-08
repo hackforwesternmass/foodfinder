@@ -28,7 +28,7 @@ ul {
   }
 }
 
-#map {
+#map-canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -90,7 +90,6 @@ main {
 }
 
 .results-pane {
-  box-shadow: 1px 1px 10px rgba(0,0,0, .5);
   box-sizing: border-box;
   position: absolute;
   top: 400px;
@@ -115,7 +114,7 @@ main {
 }
 
 @media(min-width: 768px) {
-  #map {
+  #map-canvas {
     height: 100%;
     width: 70%;
     right: 30%;
@@ -129,18 +128,15 @@ main {
   }
 
   .results-pane {
-    height: 100%;
     width: 30%;
     top: 0;
     padding: 16px;
   }
 
   .results-container {
-    height: 100%;
   }
 
   header {
-    z-index: 100;
     h1 {
       border-radius: $border-radius;
     }
