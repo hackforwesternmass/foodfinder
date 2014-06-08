@@ -1,16 +1,16 @@
 @import 'variables';
 
 .btn {
-	border-radius: $border-radius;
-	padding: 8px 16px;
-	margin: 4px 0px 4px;
-	border: 1px solid $brand-primary;
-	color: $brand-primary;
-	background: none;
-	&:hover,
-	&:focus {
-		background-color: $brand-primary;
-		color: white;
-	}
+  border-radius: $border-radius;
+  padding: 8px 16px;
+  margin: 4px 0px 4px;
+  border: 1px solid $brand-primary;
+  color: $brand-primary;
+  background: none;
+  &:hover,
+  &:focus {
+    background-color: $brand-primary;
+    color: white;
+  }
 }
 
