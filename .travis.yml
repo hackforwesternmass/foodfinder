@@ -1,4 +1,6 @@
 language: ruby
 rvm:
   - 2.1.1
-script: bundle exec rake spec
+script:
+ - rake db:migrate
+ - bundle exec rake spec
