@@ -1,5 +1,5 @@
 !!! html
-%html
+%html{ 'ng-app' => 'FoodFinder' }
   %head
     %title Foodfinder
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
@@ -8,5 +8,5 @@
 
     %script{ type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyArxBworipuSW-w30-xjZLTXHIAtgZ9xp0" }
 
-  %body
+  %body{ 'ng-controller' => 'SearchCtrl' }
     = yield

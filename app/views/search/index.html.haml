@@ -10,10 +10,10 @@
 %header.search-pane
   %h1= t('title')
 
-  %form.search#search
+  %form.search#search{ name: 'searchForm' }
     .search-location
-      %input#start{ name: 'query', placeholder: 'Address / City / Zip' }
-      %button{:class => "btn btn-options"}= t('search_button')
+      %input#start{ 'name' => 'query', 'placeholder' => 'Address / City / Zip', 'ng-model' => 'query' }
+      %button{:class => "btn btn-options", 'ng-click' => 'performSearch()'}= t('search_button')
 
     .options
       %p= t('looking_for')
@@ -34,4 +34,20 @@
     %h2= t('results_header')
     %hr
     #results
-      .text-center= image_tag('logo.jpg')
+      .result{ 'ng-repeat' => 'agency in agencies' }
+        %h3
+          %a.show-agency{ href: '#', data: { lat: '{{agency.latitude}}', long: '{{agency.longitude}}' } }
+            {{agency.type}} - {{agency.agency}}
+        %p.address
+          {{agency.address}}, {{agency.city}}, {{agency.state}}, {{agency.zip}}
+        %p.phone
+          {{agency.phone}}
+        %p.distance{ 'ng-if' => 'agency.distance' }
+          {{agency.distance}} miles away.
+        %p.hours
+          {{agency.hours}}
+
+        %button.btn.get-directions{ data: { lat: '{{agency.latitude}}', long: '{{agency.longitude}}' } }
+          Get Directions
+
+        %hr
