@@ -19,6 +19,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Geocoder for lon lat
 gem "geocoder"
 
+# New Relic App Monitoring
+gem 'newrelic_rpm'
+
 # tests!
 gem "rspec-rails"
 
