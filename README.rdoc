@@ -1,31 +1,21 @@
-== README
+= FoodFinder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-== Build Status
 {<img src="https://travis-ci.org/hackforwesternmass/foodfinder.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/hackforwesternmass/foodfinder]
+
+== Ruby version
+
++2.0.0+
+
+== Configuration
+
+When you update, you will need to run +cp ./.env.example ./.env+ and then use
+foreman to start the application: +foreman start+. This setup uses the Procfile
+to run the rails server command and loads the variables from .env into the ENV
+constant in Rails.
+
+== Database creation
+
+We use postgres.
+
++createdb foodfinder_development+
+
