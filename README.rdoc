@@ -4,12 +4,12 @@
 
 == Ruby version
 
-+2.0.0+
+<tt>2.0.0</tt>
 
 == Configuration
 
-When you update, you will need to run +cp ./.env.example ./.env+ and then use
-foreman to start the application: +foreman start+. This setup uses the Procfile
+When you update, you will need to run <tt>cp ./.env.example ./.env</tt> and then use
+foreman to start the application: <tt>foreman start</tt>. This setup uses the Procfile
 to run the rails server command and loads the variables from .env into the ENV
 constant in Rails.
 
@@ -17,5 +17,5 @@ constant in Rails.
 
 We use postgres.
 
-+createdb foodfinder_development+
+<tt>createdb foodfinder_development</tt>
 
