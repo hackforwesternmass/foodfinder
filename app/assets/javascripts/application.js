@@ -12,8 +12,9 @@
 //
 //= require angular.min
 //= require angular-resource.min
+//= require lodash.underscore.min
+//= require angular-google-maps.min
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require mustache
 //= require_tree .

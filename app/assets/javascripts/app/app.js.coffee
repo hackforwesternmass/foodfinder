@@ -1,1 +1,1 @@
-@app = angular.module('FoodFinder', ['ngResource'])
+@app = angular.module('FoodFinder', ['ngResource', 'google-maps'])

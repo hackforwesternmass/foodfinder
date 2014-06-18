@@ -32,7 +32,7 @@ ul {
   text-align: center;
 }
 
-#map-canvas {
+.angular-google-map-container {
   position: absolute;
   top: 128px;
   left: 0;
@@ -123,7 +123,7 @@ main {
 
 @media(min-width: 768px) {
 
-  #map-canvas {
+  .angular-google-map-container {
     height: 100%;
     width: 70%;
     top: 0;

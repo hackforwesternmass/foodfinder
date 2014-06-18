@@ -1,13 +1,5 @@
-:javascript
-  var geocoder;
-  var map;
-  var directionsDisplay;
-  var directionsService = new google.maps.DirectionsService();
-  google.maps.event.addDomListener(window, 'load', initialize);
 
--# #map-canvas
-
-%google-map#map-canvas{:events => "map.events", :zoom => 10}
+%google-map{:center => "map.center", :zoom => "map.zoom", :draggable => "true", :pan => "true"}
 
 %header.search-pane
   %h1= t('title')
