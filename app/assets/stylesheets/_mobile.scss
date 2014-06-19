@@ -1,0 +1,11 @@
+@import "variables";
+
+@media(max-width: $screen-md) {
+  .slide {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    &.in {
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+  }
+}

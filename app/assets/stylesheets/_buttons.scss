@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .btn {
   border-radius: $border-radius;
@@ -16,11 +16,10 @@
 
 .btn-options {
   border: 1px solid white;
-  color: white; 
+  color: white;
   &:hover,
   &:focus {
     background-color: white;
     color: $brand-primary;
   }
 }
-
