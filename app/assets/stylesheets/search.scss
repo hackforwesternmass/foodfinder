@@ -41,6 +41,16 @@ ul {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  position: fixed;
+  #map-canvas {
+    top: 128px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 header {
@@ -87,7 +97,7 @@ main {
 
 .search-pane {
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -126,28 +136,21 @@ main {
   .angular-google-map-container {
     height: 100%;
     width: 70%;
-    top: 0;
-    right: 30%;
+    position:fixed;
+    #map-canvas {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 30%;
+    }
   }
 
   .search-pane {
     top: 10px;
     left: 88px;
     width: 30%;
-
-  }
-
-  .results-pane {
-    width: 30%;
-    top: 0;
-    left: auto;
-    padding: 16px;
-  }
-
-  .results-container {
-  }
-
-  header {
+    position: fixed;
     h1 {
       border-radius: $border-radius;
     }
@@ -159,5 +162,12 @@ main {
       border-bottom-left-radius: $border-radius;
       margin-bottom: 2px;
     }
+  }
+
+  .results-pane {
+    width: 30%;
+    top: 0;
+    left: auto;
+    padding: 16px;
   }
 }
