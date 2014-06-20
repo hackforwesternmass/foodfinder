@@ -58,7 +58,37 @@ $(function() {
             title: 'Ok'
           });
 
+          var agency = resp[i];
+
+          // Adds info window to each marker
+          addInfoWindow(marker, agency);
+
           window.markers.push(marker)
+        }
+
+        // Sets up info window with content
+        function addInfoWindow(marker, agency) {
+          var infowindow = new google.maps.InfoWindow({
+            maxWidth: 200,
+            content: "<strong>" + agency.agency + "</strong>" + "<br>" +
+            agency.phone + "<br>" +
+            agency.type + "<br>" +
+            agency.distance + " miles away<br>" +
+            agency.hours
+          });
+
+          // Show info window on click
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(marker.get('map'), marker);
+          });
+
+          // Hide info window on map click
+          google.maps.event.addListener(map, "click", function(){
+            infowindow.close();
+          });
+
+          // TODO: hide info window on other marker click
+          // TODO: create only one info window and switch content w/ setContent
         }
 
       });
@@ -82,12 +112,10 @@ $(function() {
     long = $(e.target).attr('data-long');
     start = $("#start").val();
     end = lat + " " + long;
-    console.log(lat, long, start, end);
     calcRoute(start, end);
     e.preventDefault();
     return false;
   });
-
 
   //$("body").on("click", function(e) {
     //if(!$(e.target).hasClass("show-agency")) {
