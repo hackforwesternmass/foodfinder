@@ -14,6 +14,16 @@ class AjaxController < ApplicationController
       @agencies = @agencies.where("agency_type_id = ?", "B")
     end
 
-    render json: @agencies
+    if params[:open_now]
+      @to_ret = []
+      @agencies.each do |agency|
+        if agency.is_open
+          @to_ret.push(agency)
+        end
+      end
+      @agencies = @to_ret
+    end
+
+    render json: @agencies.as_json(methods: :is_open)
   end
 end

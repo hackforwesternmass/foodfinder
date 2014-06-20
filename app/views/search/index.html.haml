@@ -29,6 +29,9 @@
           %li
             %input{ :id => "brown_bag", :type => "checkbox", :name => 'brown_bag', value: '1' }
             %label{ :for => "brown_bag" }= t('search_option_brown_bag')
+          %li
+            %input{ :id => "open_now", :type => "checkbox", :name => 'open_now', value: '1' }
+            %label{ :for => "open_now" }= t('search_option_open_now')
 
 .results-container
   %main.results-pane.slide

@@ -9,10 +9,10 @@ class Agency < ActiveRecord::Base
     [address, city, state].join(', ')
   end
 
-  def is_open(time)
+  def is_open(time=Time.now)
     day_of_week = time.strftime('%A')
     am_pm = time.strftime('%p')
-    
+
     if am_pm == 'AM'
       if day_of_week == "Monday"
         self.open_mon_am
