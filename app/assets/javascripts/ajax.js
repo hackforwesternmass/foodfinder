@@ -39,17 +39,17 @@ $(function() {
 
         setTimeout(function() {
           $('.results-pane').addClass('in');
-        }, 200)
+        }, 200);
 
         if (typeof window.markers != "undefined") {
           for (var i = 0; i < window.markers.length; i++) {
-            window.markers[i].setMap(null)
+            window.markers[i].setMap(null);
           }
         }
 
-        window.markers = []
+        window.markers = [];
 
-        var len = resp.length
+        var len = resp.length;
         for (var i = 0; i < len; i++) {
           var myLatlng = new google.maps.LatLng(resp[i].latitude,resp[i].longitude);
           var marker = new google.maps.Marker({
@@ -63,7 +63,7 @@ $(function() {
           // Adds info window to each marker
           addInfoWindow(marker, agency);
 
-          window.markers.push(marker)
+          window.markers.push(marker);
         }
 
         // Sets up info window with content
@@ -116,16 +116,4 @@ $(function() {
     e.preventDefault();
     return false;
   });
-
-  //$("body").on("click", function(e) {
-    //if(!$(e.target).hasClass("show-agency")) {
-      //return;
-    //}
-    //var lat, long;
-    //lat = $(e.target).attr('data-lat');
-    //long = $(e.target).attr('data-long');
-    //zoomTo(lat, long);
-    //e.preventDefault();
-    //return false;
-  //});
 });
