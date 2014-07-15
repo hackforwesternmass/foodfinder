@@ -3,7 +3,7 @@ function initialize()
   directionsDisplay = new google.maps.DirectionsRenderer();
   var mapOptions = {
     center: new google.maps.LatLng(42.277309,-72.634735),
-    zoom: 10,
+    zoom: 11,
     scaleControl: true
   };
   geocoder = new google.maps.Geocoder();
