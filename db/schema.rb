@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140607235707) do
+ActiveRecord::Schema.define(version: 20140715225147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140607235707) do
     t.boolean  "open_sat_pm"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "in_latest_import", default: true
   end
 
 end

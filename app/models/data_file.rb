@@ -6,6 +6,8 @@ class DataFile
     json = JSON.parse CSV.parse(file.read).to_json
     attributes = json[0]
 
+    Agency.update_all(in_latest_import: false)
+
     for obj in json
       # Skip headers
       next if obj[0] == "AgencyRef"
@@ -15,6 +17,7 @@ class DataFile
       attributes.each_with_index do |a, i|
         agency_data[a.underscore] = obj[i]
       end
+      agency_data[:in_latest_import] = true
 
       if existing_agency = Agency.where(agency_ref: obj[0]).first
         existing_agency.update_attributes(agency_data)
