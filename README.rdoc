@@ -26,4 +26,5 @@ We use postgres.
 == IRC
 
 freenode.net
+
 #foodfinder
