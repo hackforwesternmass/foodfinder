@@ -26,9 +26,11 @@ class DataFile
       end
     end
 
-    # TODO(tmorris): delete obsolete records from database.
-    #   Make sure that you don't delete all the rows in the database
-    #   if it was a bad import.
+    if Agency.where(in_latest_import: true).count >= 1
+      Agency.where(in_latest_import: false).delete
+    else
+      raise IOError, "No data found in Agency import."
+    end
   end
 
 end
