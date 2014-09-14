@@ -29,6 +29,13 @@ en:
   search_option_groceries: "Groceries"
   search_option_hot_meals: "Hot Meals"
   search_option_brown_bag: "Brown Bag (55+ only)"
+  search_option_open_monday: "Mon"
+  search_option_open_tuesday: "Tues"
+  search_option_open_wednesday: "Wed"
+  search_option_open_thursday: "Thur"
+  search_option_open_friday: "Fri"
+  search_option_open_saturday: "Sat"
+  search_option_open_sunday: "Sun"
   #explantions
   disclaimer: "In accordance with Federal law and U.S. Department of Agriculture policy, this institution is prohibited from discriminating on the basis of race, color, national origin, sex, age, or disability.  (Not all prohibited bases apply to all programs.)  To file a complaint of discrimination, write to USDA, Director, Office of Civil Rights, 1400 Independence Avenue, S.W., Washington, D.C. 20250-9410, or call (800)795-3272 (voice) or (202)720-6382 (TDD). USDA is an equal opportunity provider employer, and lender."
   search_explanation_html: "<p>The Emergency Food Network is a group of food providers in Western Massachusetts who provide free food throughout the region.</p>
