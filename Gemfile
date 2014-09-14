@@ -17,11 +17,9 @@ gem "rspec-rails"
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
-group :development do
-  gem 'foreman'
-  gem 'spring'
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
 end
 
 gem 'rails_12factor', group: :production
