@@ -11,13 +11,9 @@ $(function() {
       agency = agencies[i];
       agency.distance = agency.distance.toFixed(1)
       output += Mustache.render("<div class='result'> \
-<<<<<<< HEAD
         <h3>{{type}}</h3> \
+        <h4>{{program}}</h4> \
         <h4><a class='show-agency' data-lat='{{latitude}}' data-long='{{longitude}}' href='#'>{{agency}}</a></h4> \
-        <h3><a class='show-agency' data-lat='{{latitude}}' data-long='{{longitude}}' href='#'>{{agency}}{{#program}}, {{program}}{{/program}}</a></h3> \
-=======
-        <h3><a class='show-agency' data-lat='{{latitude}}' data-long='{{longitude}}' href='#'>{{type}}: {{agency}}{{#program}}, {{program}}{{/program}}</a></h3> \
->>>>>>> master
         <p class='address'>{{address}}, {{city}}, {{state}} {{zip}}</p> \
         <p class='phone'>{{phone}} \
         <p class='distance'>{{distance}} miles away.</p> \
