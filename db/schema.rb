@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140914143938) do
     t.boolean  "open_sat_pm"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "in_latest_import", default: true
   end
 
   create_table "users", force: true do |t|
