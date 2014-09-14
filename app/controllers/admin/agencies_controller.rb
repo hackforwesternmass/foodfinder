@@ -1,4 +1,5 @@
 class Admin::AgenciesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @failed_agencies = Agency.where('longitude is NULL')
