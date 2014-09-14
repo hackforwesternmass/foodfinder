@@ -27,7 +27,7 @@ class DataFile
     end
 
     if Agency.where(in_latest_import: true).count >= 1
-      Agency.where(in_latest_import: false).delete
+      Agency.where(in_latest_import: false).delete_all
     else
       raise IOError, "No data found in Agency import."
     end
