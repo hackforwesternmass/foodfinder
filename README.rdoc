@@ -22,3 +22,8 @@ We use postgres.
 == Implemented site
 
 [http://fbwm-foodfinder.herokuapp.com]
+
+== IRC
+
+freenode.net
+#foodfinder
