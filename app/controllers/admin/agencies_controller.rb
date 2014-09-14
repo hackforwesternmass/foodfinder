@@ -1,4 +1,8 @@
 class Admin::AgenciesController < ApplicationController
+  before_action :authenticate_user!
+  before_filter do
+    redirect_to root_path unless current_user.admin?
+  end
 
   def index
     @failed_agencies = Agency.where('longitude is NULL')
